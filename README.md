@@ -18,8 +18,8 @@ require_once '/path/to/autoload.php';
 
 use TryPhp\PredictIsTrait;
 
-$assertions = new PredictIsTrait() {
-	use PredictExeptionTrait();
+$assertions = new class() {
+	use PredictIsTrait();
 } 
 
 $assertions->is(3, 3); // won't throw an exception
